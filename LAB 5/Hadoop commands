@@ -1,0 +1,55 @@
+1. hduser@bmsce-Precision-T1700:/$ su hduser
+Password:
+hduser@bmsce-Precision-T1700:/$ cd /
+hduser@bmsce-Precision-T1700:/$ cd /usr/local/hadoop/sbin
+
+2. hduser@bmsce-Precision-T1700:/usr/local/hadoop/sbin$ start-all.sh
+3. hduser@bmsce-Precision-T1700:/usr/local/hadoop/sbin$ jps
+4. create a file on Desktop(sample.txt) and type the below lines:
+hi how are you
+how is your job1. hduser@bmsce-Precision-T1700:/$ su hduser
+Password:
+hduser@bmsce-Precision-T1700:/$ cd /
+hduser@bmsce-Precision-T1700:/$ cd /usr/local/hadoop/sbin
+
+2. hduser@bmsce-Precision-T1700:/usr/local/hadoop/sbin$ start-all.sh
+3. hduser@bmsce-Precision-T1700:/usr/local/hadoop/sbin$ jps
+4. create a file on Desktop(sample.txt) and type the below lines:
+hi how are you
+how is your job
+how is your family
+how is your brother
+how is your sister
+
+save your file
+
+5. View the directory content
+hadoop fs -ls /
+
+6. Create a directory using the following command. If any directory
+existing, use the same directory for the command
+hadoop fs -mkdir /rgs
+7. Copy the file into HDFS
+hadoop fs -copyFromLocal D:/sample.txt /rgs/test.txt
+8.Run the Map Reduce Program
+hadoop jar /home/hduser/Desktop/Jwordcount.jar WCDriver input output
+9. hadoop fs -ls /output/
+10. hadoop fs -cat /output/part-00000
+how is your family
+how is your brother
+how is your sister
+
+save your file
+
+5. View the directory content
+hadoop fs -ls /
+
+6. Create a directory using the following command. If any directory
+existing, use the same directory for the command
+hadoop fs -mkdir /rgs
+7. Copy the file into HDFS
+hadoop fs -copyFromLocal D:/sample.txt /rgs/test.txt
+8.Run the Map Reduce Program
+hadoop jar /home/hduser/Desktop/Jwordcount.jar WCDriver input output
+9. hadoop fs -ls /output/
+10. hadoop fs -cat /output/part-00000
